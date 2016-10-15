@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clientId: 1
+  teamId: 1
+  netAmount: 1
+  grossAmount: 1
+  description: MyText
+  startTime: 2016-10-15 15:33:25
+  stopTime: 2016-10-15 15:33:25
+  materials: MyString
+
+two:
+  clientId: 1
+  teamId: 1
+  netAmount: 1
+  grossAmount: 1
+  description: MyText
+  startTime: 2016-10-15 15:33:25
+  stopTime: 2016-10-15 15:33:25
+  materials: MyString

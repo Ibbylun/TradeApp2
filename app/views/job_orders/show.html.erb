@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clientid:</strong>
+  <%= @job_order.clientId %>
+</p>
+
+<p>
+  <strong>Teamid:</strong>
+  <%= @job_order.teamId %>
+</p>
+
+<p>
+  <strong>Netamount:</strong>
+  <%= @job_order.netAmount %>
+</p>
+
+<p>
+  <strong>Grossamount:</strong>
+  <%= @job_order.grossAmount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job_order.description %>
+</p>
+
+<p>
+  <strong>Starttime:</strong>
+  <%= @job_order.startTime %>
+</p>
+
+<p>
+  <strong>Stoptime:</strong>
+  <%= @job_order.stopTime %>
+</p>
+
+<p>
+  <strong>Materials:</strong>
+  <%= @job_order.materials %>
+</p>
+
+<%= link_to 'Edit', edit_job_order_path(@job_order) %> |
+<%= link_to 'Back', job_orders_path %>
