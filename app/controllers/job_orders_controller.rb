@@ -5,6 +5,11 @@ class JobOrdersController < ApplicationController
   # GET /job_orders.json
   def index
     @job_orders = JobOrder.all
+    if params[:search]
+        @job_orders = JobOrder.search(params[:search]).order("created_at DESC")
+      else
+        @job_orders = JobOrder.all.order('created_at DESC')
+      end
   end
 
   # GET /job_orders/1

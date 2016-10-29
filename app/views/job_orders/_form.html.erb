@@ -1,7 +1,12 @@
 <%= simple_form_for(@job_order) do |f| %>
   <%= f.error_notification %>
 
+  <!--- What admin sees ,
+   Jobnumber, siteaddress, customer details, StartDate, Finishdate, customer signature, subby signature,
+   1st. ---->
+
   <div class="form-inputs">
+<% if current_user.has_role? :admin %>
     <%= f.input :clientId %>
     <%= f.input :teamId %>
     <%= f.input :netAmount %>
@@ -10,6 +15,15 @@
     <%= f.input :startTime %>
     <%= f.input :stopTime %>
     <%= f.input :materials %>
+  <% else %>
+    <%= f.input :clientId %>
+    <%= f.input :teamId %>
+    <%= f.input :netAmount %>
+    <%= f.input :grossAmount %>
+    <%= f.input :description %>
+    <%= f.input :materials %>
+  <% end %>
+
   </div>
 
   <div class="form-actions">

@@ -1,2 +1,8 @@
 class JobOrder < ApplicationRecord
-end
+  resourcify
+
+
+  def self.search(search)
+    where("teamId LIKE ?", "%#{search}%")
+  end
+  end
